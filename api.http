@@ -35,5 +35,5 @@ Content-Type: application/json
     "continente": "Afro-América"
 }
 
-### DELETE http://localhost:3010/paises/eliminar/Argentina
-DELETE http://localhost:3010/paises/eliminar/Vaticano
+### DELETE http://localhost:3010/paises/eliminar/Annobón Island
+DELETE http://localhost:3010/paises/eliminar/Annobón Island
