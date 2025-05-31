@@ -88,9 +88,11 @@ const resultado = nuevoPais.data
 try{
     paises.push(resultado)
     fs.writeFileSync('./data/countries.json', JSON.stringify(paises, null, 2))
+    console.table(resultado)
     return res.status(201).json(resultado)
 }catch(error){
-    return res.status(500).json({mensaje: error.message})
+    res.status(500).json({mensaje: error.message})
+    return console.log('Surgió un error al agregar país -> ' + error.message)
 }
 })
 
@@ -101,13 +103,16 @@ app.delete('/paises/eliminar/:nombre', (req, res) => {
     })
 
     if(paisEliminar < 0){
+        console.log(kleurColors.red(`Debe ingresar un nombre de pais válido`))
         return res.status(404).json({mensaje: `Debe ingresar un nombre de pais válido`})
     }
     try{
         const paisBorrado = paises.splice(paisEliminar, 1)
         fs.writeFileSync('./data/countries.json', JSON.stringify(paises, null, 2))
+        console.log(kleurColors.yellow(`¡El país ${nombre} se ha eliminado correctamente!`))
         return res.status(200).json(paisBorrado)
     }catch(error){
+        console.log(kleurColors.red(`ERROR al eliminar el país!!! ->  ${error.message}`))
         return res.status(500).json({mensaje: "ERROR al eliminar el país!!! ->  " + error.message})
     }
     
