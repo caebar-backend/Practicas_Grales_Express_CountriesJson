@@ -1,0 +1,39 @@
+### GET http://localhost:3010/paises
+GET http://localhost:3010/paises
+
+### GET http://localhost:3010/paises/Argentina
+GET http://localhost:3010/paises/A   Rg      eNt  In  a
+
+### GET http://localhost:3010/paises/CoREA del SUR
+GET http://localhost:3010/paises/CoREA del SUR
+
+### GET http://localhost:3010/paises/ESTadosUNIdos
+GET http://localhost:3010/paises/ESTadosUNIdos
+
+### GET http://localhost:3010/paises/Sudáfrica
+GET http://localhost:3010/paises/sudá    fri         CA
+
+### GET http://localhost:3010/paises?idioma=aLEM an
+GET http://localhost:3010/paises?idioma=aLEM an
+
+### GET http://localhost:3010/paises?idioma=I n GL é S
+GET http://localhost:3010/paises?idioma=Español
+
+### GET http://localhost:3010/paises?idioma=Español
+GET http://localhost:3010/paises?idioma=Español
+
+### GET http://localhost:3010/paises?idioma=iTAliaNO
+GET http://localhost:3010/paises?idioma=iTAliaNO
+
+### POST http://localhost:3010/paises/agregar/
+POST http://localhost:3010/paises/agregar/
+Content-Type: application/json
+
+{
+    "pais": "Annobón Island",
+    "idioma": ["Español", "Portugués"],
+    "continente": "Afro-América"
+}
+
+### DELETE http://localhost:3010/paises/eliminar/Argentina
+DELETE http://localhost:3010/paises/eliminar/Vaticano
